@@ -1,38 +1,72 @@
-.App {
+.box-container {
+  display: block;
+  padding-top: 10%;
+  margin-left: 32%;
+  width: 100%
+}
+.box-container .button {
+  width: 5rem;
+  height: 5rem;
+  font-size: x-large;
+  color: crimson;
+  font-weight: bold;
+}
+.box-container .box-row {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80vh;
+  /* width: fit-content; */
+}
+.square{
+  flex: 1 0 calc(25% - 10px); /* Adjust calc(100% / squaresPerRow) */
+  /* margin: 5px; */
+  box-sizing: border-box;
+}
+.text-center {
+  text-align: center;
+  color: #00008b;
+  font-size: 3.5rem;
+  font-weight: bold;
+}
+.status {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #00bfff;
+  animation: blinker 1s linear infinite;
+}
+
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+body {
+  height: 200px;
+  background-image: url("D:\workSpace\myLearnings\TicTacToe\tictactoe\public\BGImage.jpg");
+  background-attachment: fixed;
+  overflow-x: hidden;
+}
+.mt-5{
+  margin-top: 5rem;
+  font-size: larger;
+  margin-bottom: 2rem;
+  color: #0000cd;
+  font-size: x-large;
+  font-weight: bold;
+}
+.input-container{
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.input{
+  width: 20%;
+  border-radius: 0.2rem;
+  height: 5vh;
+  margin-right: 1rem;
+  font-size: large;
+  font-weight: bold;
+  /* margin-top: 5rem;
+  margin-left: 40rem; */
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.button.square.winner {
+  background-color: green; /* Highlight color for the winning squares */
 }
